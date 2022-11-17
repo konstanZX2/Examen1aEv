@@ -1,6 +1,21 @@
 import java.lang.reflect.Array;
 
 public class Carta {
+    public String getPalo() {
+        return palo;
+    }
+
+    public int getPuntuacion(){
+        if (numero==1){
+            return 11;
+        }
+        if (numero <=10){
+            return numero;
+        }else {
+            return 10;
+        }
+    }
+
     private String palo;
 
 
@@ -29,9 +44,34 @@ public class Carta {
 
     @Override
     public String toString() {
+
+        //String s= "";
+        /*if(numero) <=10){
+        s+=numero;}
+        else{
+        switch(numero){
+        case 11: s+="J";
+        break;
+        case 12: s+="Q";
+        break;
+        case 13: s+="K";
+        break;
+
+        s+= " de "+ palo;
+        return s;
+        }
+        }
+
+
+
+
+
+
+         */
         return "Tu carta es el " + numero + " de " + palo + ".";
 
     }
+
 
 //    public void mostrarElArrayDeStrings(){
 //        String rombos = "rombos";
